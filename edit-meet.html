@@ -14,9 +14,6 @@
 
     <div class="header">
       <div class="logo"></div>
-      <div class="hidden-mobile">
-        <button type="button" class="btn btn-create">Новая встреча</button>
-      </div>
     </div>
 
     <div id="page-edit-meet" class="block-after-header">
@@ -44,6 +41,7 @@
               <label>Начало</label>
               <input type="text" class="full-width"/>
             </div>
+            <div class="delimiter">-</div>
             <div class="input-group">
               <label>Конец</label>
               <input type="text" class="full-width"/>
@@ -61,15 +59,19 @@
           <div class="block-2col-in-1 select-participant-wrap">
             <div class="select-participant">
               <div class="one-participant" >
+                <span class="avatar" style="background-image: url('img/faces/lex.jpg');"></span>
                 Лекс Лютер . <span class="floor">7 этаж</span>
               </div>
               <div class="one-participant" >
+                <span class="avatar" style="background-image: url('img/faces/tomas.jpg');"></span>
                 Томас Андерсон . <span class="floor">2 этаж</span>
               </div>
               <div class="one-participant" >
+                <span class="avatar" style="background-image: url('img/faces/dart.jpg');"></span>
                 Дарт Вейдер . <span class="floor">1 этаж</span>
               </div>
               <div class="one-participant" >
+                <span class="avatar"></span>
               Кларк Кент . <span class="floor">2 этаж</span>
               </div>
               <div class="one-participant" >
@@ -81,17 +83,17 @@
 
           <div id="peoples" class="chosen-participant">
             <div class="one-participant">
-              <span class="avatar"></span>
+              <span class="avatar" style="background-image: url('img/faces/lex.jpg');"></span>
               Лекс Лютер
               <span class="icon-close"></span>
             </div>
             <div class="one-participant">
-              <span class="avatar"></span>
+              <span class="avatar" style="background-image: url('img/faces/tomas.jpg');"></span>
               Томас Андерсон
               <span class="icon-close"></span>
             </div>
             <div class="one-participant">
-              <span class="avatar"></span>
+              <span class="avatar" style="background-image: url('img/faces/dart.jpg');"></span>
               Дарт Вейдер
               <span class="icon-close"></span>
             </div>
@@ -107,23 +109,14 @@
             Готем . 4 этаж
             <span class="icon-close"></span>
           </div>
-
-          <div class="one-room">
-            <span class="time">16:00-16:30</span>
-            Поле непаханное . 4 этаж
-          </div>
-
-          <div class="one-room">
-            <span class="time">16:00-16:30</span>
-            Тёмная башня . 4 этаж
-          </div>
         </div>
 
       </div>
 
       <div class="footer">
         <button type="button" class="btn btn-cancel">Отмена</button>
-        <button type="button" class="btn btn-create">Создать встречу</button>
+        <button type="button" class="btn btn-delete">Удалить встречу</button>
+        <button type="button" class="btn btn-save">Сохранить</button>
       </div>
 
     </div><!-- /div.container -->

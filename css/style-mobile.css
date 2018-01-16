@@ -1,0 +1,165 @@
+@media screen and (max-width: 650px) {
+  /*для скрытия элементов на мобильных*/
+  .hidden-mobile {
+    display: none;
+  }
+
+  .header {
+    height: 48px;
+  }
+
+  .logo {
+    height: 20.9px;
+  }
+
+  .block-after-header {
+    padding-top: 48px;
+  }
+
+  #show-calendar-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    width: 100%;
+    height: 56px;
+    padding: 0 16px;
+    top: 48px;
+    border-bottom: 1px solid #E9ECEF;
+
+    z-index: 20;
+  }
+  #show-calendar-mobile .grey-circle {
+    width: 32px;
+    height: 32px;
+  }
+
+  table.schedule {
+    width: auto;
+    overflow-x: auto;
+    table-layout: auto;
+  }
+  table.schedule tr {
+    height: 58px;
+  }
+  table.schedule > tbody,
+  table.schedule td.floor:first-child{
+    background: #F6F7F9;
+  }
+  table.schedule tr.floor > td{
+    background: #E9ECEF;
+  }
+  table.schedule tbody > tr td,
+  table.schedule td:first-child {
+    border-top: 1px solid #E9ECEF;
+    border-bottom: 1px solid #E9ECEF;
+  }
+
+  table.schedule td,
+  table.schedule th {
+    min-width: 65px
+  }
+
+  .schedule-first-col {
+    min-width: 181px;
+  }
+
+  table.schedule tr th:first-child {
+    min-width: 181px;
+  }
+
+  table.schedule tr td:first-child {
+    /*текст переносится только тегом br*/
+
+    padding-left: 16px;
+    padding-right: 25px;
+    width: 181px;
+  }
+
+  /*Высчитаем максимальную ширину span
+  * 181px - 16px - 25px = 140px
+  */
+  table.schedule td > span.title,
+  table.schedule td > span.desc {
+    overflow: hidden;
+    max-width: 140px;
+  }
+
+  .schedule-free,
+  .schedule-busy{
+    /*Из за границы у td произошло смещение на 2 px
+    **Но мы выставляем смещение 4 px - поскольку накладываются браузерные стили
+    */
+    margin-top:4px;
+    height: 100%;
+  }
+  .container-schedule {
+    overflow-x: auto;
+    padding-top: 104px;
+  }
+
+  .schedule .room .title.visible-overflow {
+    position: absolute;
+    left: 245px;
+    padding: 0px 8px;
+    height: 24px;
+    font-size: 11px;
+    color: #262626;
+    letter-spacing: 0.4px;
+    background: #FFFFFF;
+    box-shadow: 0 1px 8px 0 rgba(0, 44, 92, 0.28);
+    border-radius: 4px;
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 24px;
+
+  }
+
+  .schedule .room.disabled .title.visible-overflow{
+    color: #858E98;
+  }
+
+  .block-2col-big {
+    width: 100%;
+    padding-top: 31px;
+  }
+
+  .modal {
+    padding-left: 16px;
+    padding-right: 24px;
+    width: 100%;
+    bottom: 24px;
+    left: 0;
+    top: auto;
+    transform: none;
+  }
+
+  .to-align-blocks-centr {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .to-align-blocks-centr.mobile {
+    display: block;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .flex-block-col {
+    flex-direction: column;
+  }
+
+  .calendar-wrap {
+    position: absolute;
+    width: 100%;
+    height: 380px;
+    padding: 16px;
+    background: #FFFFFF;
+    box-shadow: 0 1px 8px 0 rgba(0, 44, 92, 0.28);
+    border-radius: 4px;
+    top: 30px;
+    margin-left: -16px;
+  }
+
+}

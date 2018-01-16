@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Shri2018</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <base href="."/>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style-mobile.css" media="screen and (max-width: 650px)"/>
+  </head>
+  <body>
+
+    <div class="header">
+      <div class="logo"></div>
+      <div class="hidden-mobile">
+        <button type="button" class="btn btn-create">Создать встречу</button>
+      </div>
+    </div>
+
+    <!-- Бегунок по таблице по времени -->
+    <div class="indicator-time-wrap block-after-header">
+      <span>12:05</span>
+      <div class="vert-line"></div>
+    </div>
+    <!-- // Бегунок по таблице по времени -->
+
+    <!-- Отображение строки с календарем для меньших экранов -->
+    <div id="show-calendar-mobile">
+      <div class="calendar-wrap">
+        <div class="calendar">
+          <div class="title">
+            Январь <span>2018</span>
+          </div>
+          <div class="week-days">
+            <div><span>Пн</span></div>
+            <div><span>Пн</span></div>
+            <div><span>Пн</span></div>
+            <div><span>Пн</span></div>
+            <div><span>Пн</span></div>
+            <div><span>Пн</span></div>
+            <div><span>Пн</span></div>
+          </div>
+          <div class="week">
+            <div><span>1</span></div>
+            <div><span>2</span></div>
+            <div><span>3</span></div>
+            <div><span>4</span></div>
+            <div><span>5</span></div>
+            <div><span>6</span></div>
+            <div><span>7</span></div>
+          </div>
+          <div class="week">
+            <div><span>1</span></div>
+            <div><span>2</span></div>
+            <div><span>3</span></div>
+            <div><span>4</span></div>
+            <div><span>5</span></div>
+            <div><span>6</span></div>
+            <div><span>7</span></div>
+          </div>
+          <div class="week">
+            <div><span>1</span></div>
+            <div><span>2</span></div>
+            <div><span>3</span></div>
+            <div><span>4</span></div>
+            <div><span>5</span></div>
+            <div><span>6</span></div>
+            <div><span>7</span></div>
+          </div>
+          <div class="week">
+            <div><span>1</span></div>
+            <div><span>2</span></div>
+            <div><span>3</span></div>
+            <div><span>4</span></div>
+            <div><span>5</span></div>
+            <div><span>6</span></div>
+            <div><span>7</span></div>
+          </div>
+          <div class="week">
+            <div><span>1</span></div>
+            <div><span>2</span></div>
+            <div><span>3</span></div>
+            <div><span>4</span></div>
+            <div><span>5</span></div>
+            <div><span>6</span></div>
+            <div><span>7</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="grey-circle arrow-left"></div>
+      <span class="table-date">14 дек. Сегодня</span>
+      <div class="grey-circle arrow-right"></div>
+    </div>
+    <!-- //Отображение строки с календарем для меньших экранов -->
+
+    <!-- .container-schedule -->
+    <div class="container-schedule">
+      <table class="schedule">
+
+        <colgroup>
+          <col span="1" class="schedule-first-col"/>
+          <col span="1" width="50%"/>
+          <col span="16" width="100%"/>
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th class="th-date-container">
+
+              <div class="hidden-mobile">
+                <div class="calendar-wrap">
+                  <div class="calendar">
+                    <div class="title">
+                      Январь <span>2018</span>
+                    </div>
+                    <div class="week-days">
+                      <div><span>Пн</span></div>
+                      <div><span>Пн</span></div>
+                      <div><span>Пн</span></div>
+                      <div><span>Пн</span></div>
+                      <div><span>Пн</span></div>
+                      <div><span>Пн</span></div>
+                      <div><span>Пн</span></div>
+                    </div>
+                    <div class="week">
+                      <div><span>1</span></div>
+                      <div><span>2</span></div>
+                      <div><span>3</span></div>
+                      <div><span>4</span></div>
+                      <div><span>5</span></div>
+                      <div><span>6</span></div>
+                      <div><span>7</span></div>
+                    </div>
+                    <div class="week">
+                      <div><span>1</span></div>
+                      <div><span>2</span></div>
+                      <div><span>3</span></div>
+                      <div><span>4</span></div>
+                      <div><span>5</span></div>
+                      <div><span>6</span></div>
+                      <div><span>7</span></div>
+                    </div>
+                    <div class="week">
+                      <div><span>1</span></div>
+                      <div><span>2</span></div>
+                      <div><span>3</span></div>
+                      <div><span>4</span></div>
+                      <div><span>5</span></div>
+                      <div><span>6</span></div>
+                      <div><span>7</span></div>
+                    </div>
+                    <div class="week">
+                      <div><span>1</span></div>
+                      <div><span>2</span></div>
+                      <div><span>3</span></div>
+                      <div><span>4</span></div>
+                      <div><span>5</span></div>
+                      <div><span>6</span></div>
+                      <div><span>7</span></div>
+                    </div>
+                    <div class="week">
+                      <div><span>1</span></div>
+                      <div><span>2</span></div>
+                      <div><span>3</span></div>
+                      <div><span>4</span></div>
+                      <div><span>5</span></div>
+                      <div><span>6</span></div>
+                      <div><span>7</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="grey-circle arrow-left"></div>
+                <span class="table-date">14 дек. Сегодня</span>
+                <div class="grey-circle arrow-right"></div>
+              </div>
+            </th>
+            <th></th>
+            <th><span class="hour disabled">8:00</span></th>
+            <th><span class="hour disabled">9</span></th>
+            <th><span class="hour disabled">10</span></th>
+            <th><span class="hour">11</span></th>
+            <th>
+              <span class="hour">12</span>
+            </th>
+            <th><span class="hour">13</span></th>
+            <th><span class="hour">14</span></th>
+            <th><span class="hour">15</span></th>
+            <th><span class="hour">16</span></th>
+            <th><span class="hour">17</span></th>
+            <th><span class="hour">18</span></th>
+            <th><span class="hour">19</span></th>
+            <th><span class="hour">20</span></th>
+            <th><span class="hour">21</span></th>
+            <th><span class="hour">22</span></th>
+            <th><span class="hour">23</span></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr class="floor">
+            <td>
+              <span class="title">7 ЭТАЖ</span>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="room disabled">
+            <td>
+              <span class="title visible-overflow">Ржавый Фред</span>
+              <span class="title">Ржавый Фред</span>
+              <span class="desc">3-6 человек</span>
+            </td>
+            <td></td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div><div class="schedule-busy" style="width:50%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div><div class="schedule-busy" style="width:50%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div><div class="schedule-busy" style="width:50%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div><div class="schedule-busy" style="width:50%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr class="room">
+            <td>
+              <span class="title visible-overflow">Прачечная</span>
+              <span class="title">Прачечная</span>
+              <span class="desc">до 10 человек</span>
+            </td>
+            <td></td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width:32%;"></div><div class="schedule-free" style="width:68%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:68%;"></div><div class="schedule-free" style="width:32%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width:32%;"></div><div class="schedule-free" style="width:68%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div><div class="schedule-busy" style="width:32%;"></div><div class="schedule-free" style="width:18%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr class="room">
+            <td>
+              <span class="title visible-overflow">Желтый дом</span>
+              <span class="title">Жёлтый дом</span>
+              <span class="desc">до 10 человек</span>
+            </td>
+            <td></td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width:32%;"></div><div class="schedule-free" style="width:68%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:68%;"></div><div class="schedule-free" style="width:32%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width:32%;"></div><div class="schedule-free" style="width:68%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div><div class="schedule-busy" style="width:32%;"></div><div class="schedule-free" style="width:18%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr class="room disabled">
+            <td>
+              <span class="title visible-overflow">Оранжевый тюльпан</span>
+              <span class="title">Оранжевый тюльпан</span>
+              <span class="desc">до 10 человек</span>
+            </td>
+            <td></td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width:32%;"></div><div class="schedule-free" style="width:68%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:68%;"></div><div class="schedule-free" style="width:32%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width:32%;"></div><div class="schedule-free" style="width:68%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div><div class="schedule-busy" style="width:32%;"></div><div class="schedule-free" style="width:18%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr class="floor">
+            <td>
+              <span class="title">6 этаж</span>
+            </td>
+            <td></td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width:32%;"></div><div class="schedule-free" style="width:68%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:68%;"></div><div class="schedule-free" style="width:32%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width:32%;"></div><div class="schedule-free" style="width:68%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div><div class="schedule-busy" style="width:32%;"></div><div class="schedule-free" style="width:18%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr class="room">
+            <td>
+              <span class="title visible-overflow">Джокер</span>
+              <span class="title">Джокер</span>
+              <span class="desc">3-6 человек</span>
+            </td>
+            <td></td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div><div class="schedule-busy" style="width:50%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div><div class="schedule-busy" style="width:50%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div><div class="schedule-busy" style="width:50%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div><div class="schedule-busy" style="width:50%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr class="room">
+            <td>
+              <span class="title visible-overflow">Мариванна</span>
+              <span class="title">Мариванна</span>
+              <span class="desc">3-6 человек</span>
+            </td>
+            <td></td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div><div class="schedule-busy" style="width:50%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div><div class="schedule-busy" style="width:50%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div><div class="schedule-busy" style="width:50%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div><div class="schedule-busy"
+                 style="width:32%;"></div><div class="schedule-free" style="width:18%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr class="room">
+            <td>
+              <span class="title visible-overflow">Тонкий Боб</span>
+              <span class="title">Тонкий Боб</span>
+              <span class="desc">3-6 человек</span>
+            </td>
+            <td></td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div>
+              <div class="schedule-busy" style="width:50%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div>
+              <div class="schedule-busy" style="width:50%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div>
+              <div class="schedule-busy" style="width:50%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div>
+              <div class="schedule-busy" style="width:32%;"></div>
+              <div class="schedule-free" style="width:18%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr class="room">
+            <td>
+              <span class="title visible-overflow">Чёрная вдова</span>
+              <span class="title">Чёрная вдова</span>
+              <span class="desc">3-6 человек</span>
+            </td>
+            <td></td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div>
+              <div class="schedule-busy" style="width:50%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div>
+              <div class="schedule-busy" style="width:50%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width:80%;"></div><div class="schedule-free" style="width:20%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width:20%;"></div><div class="schedule-free" style="width:80%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr class="room">
+            <td>
+              <span class="title visible-overflow">Белорусский ликёр</span>
+              <span class="title">Белорусский ликёр</span>
+              <span class="desc">3-6 человек</span>
+            </td>
+            <td></td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width:32%;"></div><div class="schedule-free" style="width:68%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:68%;"></div><div class="schedule-free" style="width:32%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width:32%;"></div><div class="schedule-free" style="width:68%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width:50%;"></div><div class="schedule-busy" style="width:32%;"></div><div class="schedule-free" style="width:18%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-free" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+              <div class="schedule-busy" style="width: 100%;"></div>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+    <!-- .container-schedule -->
+
+    <div class="container-modal" id="messCreateMeet" style="display: block;">
+      <div class="modal">
+        <div class="icon-success"></div>
+        <div class="title">
+          Встреча создана!
+        </div>
+        <div class="text">
+          <p>14 декабря, 15:00-17:00</p>
+          <p>Готэм &#183; 4 этаж</p>
+        </div>
+        <div class="area-btn">
+          <input type="button" class="btn btn-save" value="Хорошо"/>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

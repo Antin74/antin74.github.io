@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Редактирование встречи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <base href="."/>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style-mobile.css" media="screen and (max-width: 650px)"/>
+  </head>
+  <body>
+
+    <div class="header">
+      <div class="logo"></div>
+      <div class="hidden-mobile">
+        <button type="button" class="btn btn-create">Новая встреча</button>
+      </div>
+    </div>
+
+    <div id="page-edit-meet" class="block-after-header">
+
+      <div class="block-2col-in-1 title-page">
+        Редактирование встречи
+        <span class="icon-close"></span>
+      </div>
+
+
+      <div class="block-2col-in-1 flex-block-col">
+
+        <div class="input-group">
+          <label>Тема:</label>
+          <input type="text" class="full-width"/>
+        </div>
+
+        <div class="group-date-time">
+          <div class="input-group" id="group-input-date">
+            <label>Дата</label>
+            <input type="text" class="full-width"/>
+          </div>
+          <div class="group-time">
+            <div class="input-group">
+              <label>Начало</label>
+              <input type="text" class="full-width"/>
+            </div>
+            <div class="input-group">
+              <label>Конец</label>
+              <input type="text" class="full-width"/>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="block-2col-in-1 flex-block-col">
+
+        <div class="input-group">
+          <label>Участники</label>
+          <input type="text" class="full-width input-participant"/>
+          <div class="block-2col-in-1 select-participant-wrap">
+            <div class="select-participant">
+              <div class="one-participant" >
+                Лекс Лютер . <span class="floor">7 этаж</span>
+              </div>
+              <div class="one-participant" >
+                Томас Андерсон . <span class="floor">2 этаж</span>
+              </div>
+              <div class="one-participant" >
+                Дарт Вейдер . <span class="floor">1 этаж</span>
+              </div>
+              <div class="one-participant" >
+              Кларк Кент . <span class="floor">2 этаж</span>
+              </div>
+              <div class="one-participant" >
+                Служебный . <span class="floor">2 этаж</span>
+              </div>
+            </div>
+          </div>
+
+
+          <div id="peoples" class="chosen-participant">
+            <div class="one-participant">
+              <span class="avatar"></span>
+              Лекс Лютер
+              <span class="icon-close"></span>
+            </div>
+            <div class="one-participant">
+              <span class="avatar"></span>
+              Томас Андерсон
+              <span class="icon-close"></span>
+            </div>
+            <div class="one-participant">
+              <span class="avatar"></span>
+              Дарт Вейдер
+              <span class="icon-close"></span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="block-reserve">
+          <label>Ваша переговорка</label>
+
+          <div class="one-room active">
+            <span class="time">16:00-16:30</span>
+            Готем . 4 этаж
+            <span class="icon-close"></span>
+          </div>
+
+          <div class="one-room">
+            <span class="time">16:00-16:30</span>
+            Поле непаханное . 4 этаж
+          </div>
+
+          <div class="one-room">
+            <span class="time">16:00-16:30</span>
+            Тёмная башня . 4 этаж
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer">
+        <button type="button" class="btn btn-cancel">Отмена</button>
+        <button type="button" class="btn btn-create">Создать встречу</button>
+      </div>
+
+    </div><!-- /div.container -->
+
+    <div class="container-modal" id="messDelMeet">
+      <div class="modal">
+        <div class="icon-maska-cancel"></div>
+        <div class="title">
+          Встреча будет удалена безвозвратно
+        </div>
+        <div class="area-btn">
+          <input type="button" class="btn btn-cancel" value="Отмена"/>
+          <input type="button" class="btn btn-cancel" value="Удалить"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-modal" id="messCreateMeet">
+      <div class="modal">
+        <div class="icon-success"></div>
+        <div class="title">
+          Встреча создана!
+        </div>
+        <div class="text">
+          <p>14 декабря, 15:00-17:00</p>
+          <p>Готэм &#183; 4 этаж</p>
+        </div>
+        <div class="area-btn">
+          <input type="button" class="btn btn-save" value="Хорошо"/>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -96,6 +96,7 @@ body, html {
   word-wrap: normal;
   border: none;
   cursor: pointer;
+  height:36px;
 }
 
 .btn-cancel,
@@ -541,6 +542,10 @@ input.input-participant:focus + div.select-participant-wrap {
   height: 16px;
 }
 
+.block-reserve > .one-room > .title::after {
+  content: " · ";
+}
+
 .floor {
   color: #37003E;
 }
@@ -712,6 +717,11 @@ input.input-participant:focus + div.select-participant-wrap {
 .group-date-time {
   display: flex;
   flex-direction: row;
+}
+
+/*Не показывать на большом */
+.hidden-desktop{
+  display: none;
 }
 
 /***

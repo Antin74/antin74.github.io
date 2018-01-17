@@ -102,7 +102,7 @@
   .schedule .room .title.visible-overflow {
     position: absolute;
     left: 245px;
-    padding: 0px 8px;
+    padding: 0 8px;
     height: 24px;
     font-size: 11px;
     color: #262626;
@@ -118,6 +118,42 @@
 
   .schedule .room.disabled .title.visible-overflow{
     color: #858E98;
+  }
+
+  #group-input-date {
+    margin-right: 0;
+  }
+
+  #page-edit-meet .group-date-time .input-group:last-child {
+    margin-bottom: 0;
+  }
+
+  /*Страница редактирования и создания встречи */
+  .mobile-block-delimiter::after,
+  #edit-meet_hidden-div-btn-del::after,
+  #edit-meet_hidden-div-btn-del::before
+  {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 8px;
+    background: #E9ECEF;
+    margin-top: 20px;
+    padding-left: 0;
+  }
+
+  /* сбрасываем отступы для блока с кнопкой удалить */
+  #edit-meet_hidden-div-btn-del::after
+ {
+    margin-top: 0;
+  }
+
+  #page-edit-meet .block-2col-in-1.title-page::after{
+    display: none;
+  }
+
+  #page-edit-meet .group-date-time{
+    flex-direction: column;
   }
 
   .block-2col-big {
@@ -150,6 +186,17 @@
     flex-direction: column;
   }
 
+  .flex-block-col > div:first-child{
+    margin-right: 0;
+  }
+
+  .block-2col-in-1 {
+    margin: 0;
+    margin-bottom: 16px;
+    padding-left: 17px;
+    width: 100%;
+  }
+
   .calendar-wrap {
     position: absolute;
     width: 100%;
@@ -160,6 +207,23 @@
     border-radius: 4px;
     top: 30px;
     margin-left: -16px;
+  }
+
+  .btn{
+    height: 44px;
+  }
+
+  .hidden-desktop{
+    display: block;
+  }
+
+  .hidden-desktop > .btn-delete{
+    height: 54px;
+    width: 100%;
+    border: 0;
+    font-size: 15px;
+    color: #FF3333;
+    background: inherit;
   }
 
 }

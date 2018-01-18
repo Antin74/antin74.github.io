@@ -526,8 +526,10 @@ input.input-participant:focus + div.select-participant-wrap {
   padding: 10px;
 }
 
-.block-reserve > .one-room.active {
+.block-reserve > .one-room.active,
+.block-reserve > .one-room.active .floor{
   background: #007DFF;
+  color: #ffffff;
 }
 
 .block-reserve > .one-room > .time {
